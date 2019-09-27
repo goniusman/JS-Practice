@@ -1,3 +1,5 @@
+
+################# tabs using js ##################
 window.addEventListener('load', function(){
 			const tabs = document.querySelectorAll('ul.nav-tabs > li');
 			for(let i = 0; i < tabs.length; i++){

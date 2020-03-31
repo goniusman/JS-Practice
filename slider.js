@@ -11,17 +11,25 @@ const after = document.querySelector("#afterbtn");
 let counter = 1;
 const size = images[0].clientWidth;
 
-// sliders.style.transform = "translateX(" + -size * counter + "px)";
+sliders.style.transform = "translateX(" + -size * counter + "px)";
 
 next.addEventListener("click", function() {
-  if (counter >= images.length - 1) return;
+  after.style.opacity = 1;
+  if (counter >= images.length - 1) {
+    next.style.opacity = 0.5;
+    return;
+  }
   sliders.style.transition = "all 0.6s ease-in-out";
   counter++;
   sliders.style.transform = "translateX(" + -size * counter + "px)";
 });
 
 after.addEventListener("click", function() {
-  if (counter <= 0) return;
+  next.style.opacity = 1;
+  if (counter <= 0) {
+    after.style.opacity = 0.5;
+    return;
+  }
   sliders.style.transition = "all 0.6s ease-in-out";
   counter--;
   sliders.style.transform = "translateX(" + -size * counter + "px)";
@@ -42,3 +50,4 @@ after.addEventListener("click", function() {
 //     sliders.style.transform = "translateX(" + -size * counter + "px)";
 //   }
 // });
+

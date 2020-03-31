@@ -1,6 +1,10 @@
 /*
 Slider For with transition 
 */
+
+make the width of the carousel slider equal to the width of 5 sliders, 
+and change the transform in js aswell.  think of the carousel slider as a mask, 
+unveiling the images. the bigger the mask, the more of all the images you see at once
 * {
     margin: 0px;
     padding: 0px;

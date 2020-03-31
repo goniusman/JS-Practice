@@ -1,6 +1,23 @@
 /*
 Slider For with transition 
 */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container {
+    width: 70%;
+    margin: 0px auto;
+    border: 3px solid green;
+    overflow: hidden;
+}
+img {
+    width: 100%;
+}
+.sliders {
+    display: flex;
+}
 
 const sliders = document.querySelector(".sliders");
 const images = document.querySelectorAll(".sliders img");

@@ -2,26 +2,26 @@
 Slider For with transition 
 */
 
-make the width of the carousel slider equal to the width of 5 sliders, 
-and change the transform in js aswell.  think of the carousel slider as a mask, 
-unveiling the images. the bigger the mask, the more of all the images you see at once
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-.container {
-    width: 70%;
-    margin: 0px auto;
-    border: 3px solid green;
-    overflow: hidden;
-}
-img {
-    width: 100%;
-}
-.sliders {
-    display: flex;
-}
+// make the width of the carousel slider equal to the width of 5 sliders, 
+// and change the transform in js aswell.  think of the carousel slider as a mask, 
+// unveiling the images. the bigger the mask, the more of all the images you see at once
+// * {
+//     margin: 0px;
+//     padding: 0px;
+//     box-sizing: border-box;
+// }
+// .container {
+//     width: 70%;
+//     margin: 0px auto;
+//     border: 3px solid green;
+//     overflow: hidden;
+// }
+// img {
+//     width: 100%;
+// }
+// .sliders {
+//     display: flex;
+// }
 
 const sliders = document.querySelector(".sliders");
 const images = document.querySelectorAll(".sliders img");

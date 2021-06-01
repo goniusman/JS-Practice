@@ -69,7 +69,7 @@ MyConstructiveObj.prototype = {
   play() {
     return "he is play";
   },
-  eat() {
+  eat() {  
    return "he is eatch";
   },
 };

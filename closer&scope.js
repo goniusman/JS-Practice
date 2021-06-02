@@ -36,7 +36,7 @@ function stopWatch() {
   };
 }
 
-var stop = stopWatch();
+// var stop = stopWatch();
 
 // for (let i = 0; i < 100000; i++) {
 //   var a = Math.random() * 1000000;
@@ -55,6 +55,26 @@ var stop = stopWatch();
 // async();
 // a = 30;
 
+// Example this are script scope
+let g = "g";
+let h = "6";
 
+if (true) {
+  // Eample this are bloking scope
+  let t = "test";
+  let ano = () => {
+    console.log(t);
+  };
+  console.dir(ano);
+}
 
+/// this let is blockig scope. that let outside of block are scrip scope
+for (let i = 0; i < 3; i++) {
+  let myFunc = () => {
+    console.log(i);
+  };
 
+  console.log(i);
+  console.dir(myFunc);
+  setTimeout(myFunc, 4000);
+}

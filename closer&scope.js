@@ -26,7 +26,7 @@ function bankaccout(init) {
 // console.log(balance)
 
 // this method take balance var from it's closer... now it will show the value
-// console.log(bankaccout(111)());
+console.dir(bankaccout(111));
 
 function stopWatch() {
   var startTime = Date.now();
@@ -36,7 +36,7 @@ function stopWatch() {
   };
 }
 
-var stop = stopWatch();
+// var stop = stopWatch();
 
 // for (let i = 0; i < 100000; i++) {
 //   var a = Math.random() * 1000000;
@@ -55,6 +55,36 @@ var stop = stopWatch();
 // async();
 // a = 30;
 
+// Example this are script scope
+let g = "g";
+let h = "6";
+if (true) {
+  var nice = "nice";
+  // Eample this are bloking scope
+  let t = "test";
+  let ano = () => {
+    // console.log(nice);
+  };
+  // console.dir(ano);
+}
 
+/// this let is blockig scope. that let outside of block are scrip scope
+for (let i = 0; i < 3; i++) {
+  let myFunc = () => {
+    // console.log(i);
+  };
 
+  // console.log(i);
+  // console.dir(myFunc);
+  setTimeout(myFunc, 4000);
+}
 
+var nu = 3;
+function closingscope() {
+  var nu1 = 1000;
+  return function () {
+    console.log(nu1 + nu);
+  };
+}
+
+console.dir(closingscope());

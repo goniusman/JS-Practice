@@ -77,7 +77,7 @@ MyConstructiveObj.prototype = {
 
 const Osman = MyConstructiveObj("osman", 30);
 
-console.log(Osman.eat());
+// console.log(Osman.eat());
 
 // for (const i in persons) {
 //   if (Object.hasOwnProperty.call(persons, i)) {
@@ -519,3 +519,14 @@ console.log(Osman.eat());
 //   }
 //   console.log(arr[i]);
 // }
+
+
+
+
+
+
+
+
+
+
+

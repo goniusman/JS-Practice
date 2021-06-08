@@ -87,4 +87,6 @@ function closingscope() {
   };
 }
 
-console.dir(closingscope());
+// console.dir(closingscope());
+
+

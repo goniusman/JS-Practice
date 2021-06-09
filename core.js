@@ -70,10 +70,9 @@ MyConstructiveObj.prototype = {
     return "he is play";
   },
   eat() {
-   return "he is eatch";
+    return "he is eatch";
   },
 };
-
 
 const Osman = MyConstructiveObj("osman", 30);
 
@@ -519,10 +518,6 @@ const Osman = MyConstructiveObj("osman", 30);
 //   }
 //   console.log(arr[i]);
 // }
-
-
-
-
 
 
 

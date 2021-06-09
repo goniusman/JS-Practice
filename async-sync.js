@@ -1,7 +1,5 @@
 ///// call back helth
 
-
-
 // 1. blocking behaviour with example // sync behaviour
 const processOrderBlocking = (customer) => {
   console.log(`processing order for customer 1`);
@@ -48,14 +46,49 @@ const completed = (customer) => {
   console.log(`completed order for ${customer}`);
 };
 
-takeOrder("customer 1", (customer) => {
-  processOrder(customer, (customer) => {
-    completed(customer);
-  });
+// takeOrder("customer 1", (customer) => {
+//   processOrder(customer, (customer) => {
+//     completed(customer);
+//   });
+// });
+// console.log(`hello`);
+// takeOrder("customer 2", (customer) => {
+//   processOrder(customer, (customer) => {
+//     completed(customer);
+//   });
+// });
+
+///// create async function
+
+const hasMeeting = true;
+const meeting = new Promise((resolve, reject) => {
+  if (!hasMeeting) {
+    const meeting = {
+      name: "osman",
+      designation: "Web Developer",
+      duration: "1 min",
+    };
+    resolve(meeting);
+  } else {
+    reject(new Error("meeting already sheduled"));
+  }
 });
-console.log(`hello`);
-takeOrder("customer 2", (customer) => {
-  processOrder(customer, (customer) => {
-    completed(customer);
-  });
-});
+///// without try catch block
+// async function createasync() {
+//   const mettingDetails = await meeting;
+//   console.log(mettingDetails);
+// }
+
+// for handleing error, we should use try catch blok
+async function createasyncs() {
+  try {
+    const mettingDetails = await meeting;
+    console.log(mettingDetails);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+createasyncs();
+
+console.log("at first i will shown before createasync() ");

@@ -34,23 +34,43 @@
 ////  with sumit vi example
 const hasMeeting = true;
 
-const meeting = new Promise((resolve, reject) => {
-  if (hasMeeting) {
-    const meeting = {
-      name: "osman",
-      designation: "Web Developer",
-      duration: "1 min",
-    };
-    resolve(meeting);
-  } else {
-    reject(new Error("meeting already sheduled"));
-  }
+// const meeting = new Promise((resolve, reject) => {
+//   if (hasMeeting) {
+//     const meeting = {
+//       name: "osman",
+//       designation: "Web Developer",
+//       duration: "1 min",
+//     };
+//     resolve(meeting);
+//   } else {
+//     reject(new Error("meeting already sheduled"));
+//   }
+// });
+
+// meeting
+//   .then((res) => {
+//     console.log(JSON.stringify(res));
+//   })
+//   .catch((err) => {
+//     console.log(err.message);
+//   });
+
+///// another example with promise...
+
+const promise1 = Promise.resolve(`promise 1 resolved`);
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(`promise 2 resolved`);
+  }, 2000);
 });
 
-meeting
-  .then((res) => {
-    console.log(JSON.stringify(res));
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
+//// run one by one promise.....
+promise1.then((res) => console.log(res));
+promise2.then((res) => console.log(res));
+
+//// all promise run together
+Promise.all([promise1, promise2]);
+
+//// only first resolved velue will be shwon
+Promise.race([promise1, promise2]).then((res) => console.log(res));

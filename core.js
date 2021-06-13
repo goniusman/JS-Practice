@@ -1,3 +1,5 @@
+const { copyWithin } = require("core-js/core/array");
+
 var arr = [12, 2, 34, 55, 32, 3, 3];
 var persons = [
   { name: "HM Nayem", age: 22 },
@@ -521,6 +523,8 @@ const Osman = MyConstructiveObj("osman", 30);
 
 
 
+// copyWithin 
+// console.log()
 
 
 

@@ -3,6 +3,7 @@
 // string, number, boolen, null, undefined, es6>>> symbol.
 // 2. reference/composite data type: these type stored in heap only value.
 // MasterObject > object,array,function,date,math
+//// in function all (any type) parameter passed referece....
 
 // example primitive data type for
 var a = "a";
